@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="style.css">
+    <title>Praktikum 7</title>
+</head>
+<body>
+    <div class="flex-container">
+            <div class="left">
+                <h1>Selamat Datang!</h1>
+                <h4>Silahkan Pilih Provinsi dan Kota.</h4>
+                <div class="provinsi">
+                    <select class="select_prov" name="prov" id="select_prov" onchange="update()">
+                        <option disabled="disabled" selected="selected">Provinsi</option>
+                        <option value="DKI Jakarta">DKI Jakarta</option>
+                        <option value="Jawa Barat">Jawa Barat</option>
+                        <option value="Kepulauan Riau">Kepulauan Riau</option>
+                    </select>
+                </div>
+                
+                <div class="kota">
+                    <select class="select_kota" name="prov" id="select_kota" onchange="showKota()">
+                        <option value="none">Kota</option>  
+                    </select>
+                </div>
+                <h3 id="result">Pilih Provinsi dan Kota terlebih dahulu!</h3>
+                <div class='display-mode'>
+                    <label class="switch">
+                        <input type="checkbox" id='mode' onchange="toggleTheme()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        <div class="img">
+            <img src="map.png" alt="map-indonesia" id="map">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
